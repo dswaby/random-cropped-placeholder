@@ -1,0 +1,7 @@
+# uses easyimage, express, ejs
+node_modules
+
+# image directories
+source-images
+.resized-images-cache
+
