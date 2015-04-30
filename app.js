@@ -4,7 +4,7 @@
 // root@precise32:/vagrant_GitHub/node-baconmockup# echo 8192 > /proc/sys/fs/inotify/max_user_instances
 
 
-var port = 5309;
+var port = 5399;
 
 var fs = require('fs');
 var express = require('express');
