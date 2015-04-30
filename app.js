@@ -10,6 +10,7 @@ var fs = require('fs');
 var express = require('express');
 var app = express();
 var easyimg = require('easyimage');
+var path = require('path');
 var DynamicPlaceholderImages = require('./lib/dphimg.js');
 
 
@@ -28,9 +29,10 @@ var model = {
 
 
 // configure the app
-app.configure(function() {
+// app.configure(function() {
 
 	app.set('view engine', 'ejs');
+  app.use(express.static(path.join(__dirname, 'public')));
 
 	// make the cache directory if it doesn't exist
 	fs.mkdir(resized_images_cache, function(err, data) { });
@@ -48,7 +50,7 @@ app.configure(function() {
 		}
 	});
 
-});
+// });
 
 
 /**********/
