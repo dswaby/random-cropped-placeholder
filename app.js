@@ -164,13 +164,3 @@ function loadImageList(filename, callback) {
 	});
 
 }
-
-
-
-
-
-// example middleware function
-//function middle1(req,res,next) {
-	//console.log('middle1 called');
-	//next();
-//}
