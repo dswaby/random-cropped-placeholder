@@ -39,10 +39,8 @@ app.configure(function() {
 		if (err)
 			console.log('loadImageList: ' + err);
 		else {
-      console.log(data)
 			imagelist = data;
 			console.log('imagelist loaded');
-
 			// fire up the web server
 			app.listen(port);
 			console.log('Listening on port ' + port);
@@ -89,11 +87,12 @@ app.get(/\/([\d]+)\/([\d]+)\/*([0-9a-zA-Z\-]*)\/?/, function sendDynamicPlacehol
 	var dynamicPlaceholderImages = new DynamicPlaceholderImages(source_images_dir, resized_images_cache, imagelist);
 
 	dynamicPlaceholderImages.on('filedata', function(data) {
-		//console.log(data);
 		sendResizedImage(res, data.binarydata, data.filename, function(err, data) {
 			if (err)
 				console.log(err);
 		});
+    res.end(data);
+    // console.log(req);
 	}).on('error', function(err) {
 		console.log(err);
 		send404Page(req, res);
