@@ -148,6 +148,7 @@ function sendResizedImage(res, binarydata, filename, callback) {
 function loadImageList(filename, callback) {
 	fs.readFile(filename, function(err, data) {
 		if (err) {
+      console.log("loadImageList error", err)
 			return callback(err, null);
 		}
 		else {
