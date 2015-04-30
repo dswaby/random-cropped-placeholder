@@ -23,7 +23,7 @@ var imagelist;
 // base data model
 var model = {
 	'SiteName':'pillowparty.me',
-	'Title':''
+	'Title':'Pillow Party Placeholders'
 };
 
 
