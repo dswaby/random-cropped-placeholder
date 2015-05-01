@@ -19,3 +19,20 @@ svg text {
 #white text {
   fill: url(#white-pattern);
 }
+
+
+.highlight {
+  position: absolute;
+  display: inline-block;
+  width: 550px;
+  height: 50px;
+  color: #fff;
+  background-color: #272822;
+  margin:0 auto;
+  left:0;
+  right:0;
+    font-family: Consolas, Menlo, "Liberation Mono", monospace;
+    font-size: 23px;
+    padding-top: 17px;
+    padding-left: 10px;
+}
