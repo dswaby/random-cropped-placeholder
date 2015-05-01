@@ -1,53 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Bevan);
 body {
-  height: 100%;width: 100%;
-  background-image: url("/img/jungle-bg.jpg");
-  background-size: cover;
-  background-color: green;
-  background-position: center; 
+  background-color: #e6e6e6;
 }
-#button {
-  position: absolute;
-  height: 40px;
-  width: 100px;
-  border: 4px solid grey;
-  top: 50%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  cursor: pointer;
+
+svg {
+  display: block;
+  margin: 0 auto;
 }
-.travzan img{
-  width: 50px;
-  height: 250px;
-  background: yellow;
-  border: 1px solid black;
-  /* margin:100px; */
-  position: absolute;
-  /* float: left; */
-  /*top: -50px;*/
-  -webkit-transform-origin: 50% 50% 0px;
-      -ms-transform-origin: 50% 50% 0px;
-          transform-origin: 50% 50% 0px;
-  -webkit-transform: rotate(90deg);
-  right: 200px;
-  /* -moz-animation: 3s ease 0s normal none infinite swing; */
-  -moz-transform-origin: center top;
-  -webkit-transform-origin: top;
+svg text {
+  font-family: Bevan;
+  font-size: 110px;
 }
-.box.animated {
-  -webkit-animation: swing 1s infinite ease-in;
+
+#white {
+  width: 550px;
+  height: 281px;
 }
-/*@-moz-keyframes swing{
-    0%{-moz-transform:rotate(-45deg)}
-    50%{-moz-transform:rotate(0deg)}
-    100%{-moz-transform:rotate(-45deg)}
-}*/
-@-webkit-keyframes swing {
-  0% {
-    -webkit-transform: rotate(90deg);
-  }
-  /* 0%{-webkit-transform:rotate(-9deg)} */
-  100% {
-    -webkit-transform: perspective(500px) rotateY(-45deg) translateX(250px);
-  }
+#white text {
+  fill: url(#white-pattern);
 }

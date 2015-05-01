@@ -7,3 +7,4 @@ node_modules
 example.js
 bower_components
 .resized-images-cache
+*-bak
