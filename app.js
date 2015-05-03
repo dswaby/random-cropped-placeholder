@@ -129,7 +129,7 @@ function send404Page(req, res) {
 function sendResizedImage(res, binarydata, filename, callback) {
 
 	try {
-
+    res.setHeader('Cache-Control', 'public, max-age=3600'));
 		res.setHeader('Content-Type', 'image/jpeg');
 		res.setHeader('Content-Disposition', 'inline; filename=' + filename);
 		res.setHeader('Content-Length', binarydata.length);
