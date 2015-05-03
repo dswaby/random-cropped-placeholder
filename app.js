@@ -5,7 +5,7 @@
 
 
 var port = 5399;
-
+var cacheTime = 86400000*7; 
 var fs = require('fs');
 var express = require('express');
 var app = express();
@@ -32,7 +32,7 @@ var model = {
 // app.configure(function() {
 
 	app.set('view engine', 'ejs');
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.static(path.join(__dirname, 'public'), {maxAge: cacheTime}));
 
 	// make the cache directory if it doesn't exist
 	fs.mkdir(resized_images_cache, function(err, data) { });
@@ -129,9 +129,10 @@ function send404Page(req, res) {
 function sendResizedImage(res, binarydata, filename, callback) {
 
 	try {
-
+    // res.set()
 		res.setHeader('Content-Type', 'image/jpeg');
 		res.setHeader('Content-Disposition', 'inline; filename=' + filename);
+    res.setHeader('Cache-Control', 'public, max-age=31557600');
 		res.setHeader('Content-Length', binarydata.length);
 		res.end(binarydata, 'binary');
 
