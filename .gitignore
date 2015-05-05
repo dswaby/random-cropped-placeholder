@@ -5,3 +5,4 @@ bower_components
 .resized-images-cache
 source-images/*.jpg
 *-bak
+imagelist.json
