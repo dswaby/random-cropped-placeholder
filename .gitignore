@@ -5,4 +5,3 @@ bower_components
 .resized-images-cache
 source-images/*.jpg
 *-bak
-#public/css/style.css
