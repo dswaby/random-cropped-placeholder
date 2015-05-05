@@ -18,6 +18,7 @@ svg text {
 }
 #white text {
   fill: url(#white-pattern);
+  margin-top: 1em;
 }
 
 
