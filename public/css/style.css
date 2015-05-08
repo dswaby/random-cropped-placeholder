@@ -3,37 +3,28 @@ body {
   background-color: #e6e6e6;
 }
 
-svg {
-  display: block;
-  margin: 0 auto;
-}
-svg text {
-  font-family: Bevan;
-  font-size: 110px;
-}
-
-#white {
-  width: 550px;
-  height: 281px;
-}
-#white text {
-  fill: url(#white-pattern);
-  margin-top: 1em;
-}
-
 
 .highlight {
   position: absolute;
   display: inline-block;
-  width: 550px;
-  height: 50px;
+  max-width: 540px;
+  width: 70%;
+  min-width: 320px;
+  top: 150px;
+  height: 40px;
   color: #fff;
   background-color: #272822;
   margin:0 auto;
   left:0;
   right:0;
-    font-family: Consolas, Menlo, "Liberation Mono", monospace;
-    font-size: 23px;
-    padding-top: 17px;
-    padding-left: 10px;
+  font-family: Consolas, Menlo, "Liberation Mono", monospace;
+  font-size: 16px;
+  padding-top: 5px;
+  text-align: center;
+  word-break: normal; 
+  @media screen and (max-width: 321px) {
+    font-size: 2em;
+    width: 100% !important;
+  }
+  /*padding-left: 10px;*/
 }
